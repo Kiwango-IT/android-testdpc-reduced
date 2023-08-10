@@ -1,0 +1,6 @@
+/bazel-bin/
+/bazel-out/
+/bazel-testlogs/
+/bazel-tstdpc/
+/.aswb/.blaze/
+/.aswb/.idea/
