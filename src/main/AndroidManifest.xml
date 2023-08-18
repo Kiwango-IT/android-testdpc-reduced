@@ -183,27 +183,27 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".BootReceiver"
+        <!--<receiver android:name=".BootReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
-        <receiver android:name=".policy.resetpassword.ResetPasswordService$LockedBootCompletedReceiver"
+        <!--<receiver android:name=".policy.resetpassword.ResetPasswordService$LockedBootCompletedReceiver"
                 android:enabled="@bool/is_o_or_later"
                 android:exported="true"
                 android:directBootAware="true" >
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
-        <service android:name=".policy.resetpassword.ResetPasswordService"
+        <!--<service android:name=".policy.resetpassword.ResetPasswordService"
                 android:enabled="@bool/is_o_or_later"
                 android:exported="false"
                 android:directBootAware="true" >
-        </service>
+        </service>-->
 
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -239,10 +239,10 @@
                 android:exported="true"
                 android:permission="android.permission.BIND_DEVICE_ADMIN"/>
 
-        <service
+        <!--<service
                 android:name=".comp.DeviceOwnerService"
                 android:exported="true"
-                android:permission="android.permission.BIND_DEVICE_ADMIN"/>
+                android:permission="android.permission.BIND_DEVICE_ADMIN"/>-->
 
         <service
                 android:name=".DeviceAdminService"

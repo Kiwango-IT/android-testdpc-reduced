@@ -36,7 +36,6 @@ import android.app.FragmentManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.admin.DevicePolicyManager.InstallSystemUpdateCallback;
 import android.app.admin.SystemUpdateInfo;
-import android.app.admin.WifiSsidPolicy;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -47,10 +46,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.location.LocationManager;
-import android.net.ProxyInfo;
 import android.net.Uri;
-import android.net.wifi.WifiManager;
-import android.net.wifi.WifiSsid;
 import android.os.AsyncTask;
 import android.os.BatteryManager;
 import android.os.Build;
@@ -60,7 +56,6 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.provider.Settings.Global;
 import android.security.AppUriAuthenticationPolicy;
 import android.security.KeyChain;
 import android.security.KeyChainAliasCallback;
@@ -77,7 +72,6 @@ import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -110,7 +104,6 @@ import com.afwsamples.testdpc.common.MediaDisplayFragment;
 import com.afwsamples.testdpc.common.PackageInstallationUtils;
 import com.afwsamples.testdpc.common.ReflectionUtil;
 import com.afwsamples.testdpc.common.ReflectionUtil.ReflectionIsTemporaryException;
-import com.afwsamples.testdpc.common.UserArrayAdapter;
 import com.afwsamples.testdpc.common.Util;
 import com.afwsamples.testdpc.common.preference.CustomConstraint;
 import com.afwsamples.testdpc.common.preference.DpcPreference;
@@ -129,7 +122,6 @@ import com.afwsamples.testdpc.policy.locktask.LockTaskAppInfoArrayAdapter;
 import com.afwsamples.testdpc.policy.locktask.SetLockTaskFeaturesFragment;
 import com.afwsamples.testdpc.policy.networking.AlwaysOnVpnFragment;
 import com.afwsamples.testdpc.policy.networking.NetworkUsageStatsFragment;
-import com.afwsamples.testdpc.policy.resetpassword.ResetPasswordWithTokenFragment;
 import com.afwsamples.testdpc.policy.wifimanagement.WifiConfigCreationDialog;
 import com.afwsamples.testdpc.policy.wifimanagement.WifiEapTlsCreateDialogFragment;
 import com.afwsamples.testdpc.policy.wifimanagement.WifiModificationFragment;
@@ -147,7 +139,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
@@ -161,13 +152,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -343,7 +332,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
   private static final String REQUEST_NETWORK_LOGS = "request_network_logs";
   private static final String REQUEST_SECURITY_LOGS = "request_security_logs";
   private static final String REQUEST_PRE_REBOOT_SECURITY_LOGS = "request_pre_reboot_security_logs";
-  private static final String RESET_PASSWORD_KEY = "reset_password";
+  //private static final String RESET_PASSWORD_KEY = "reset_password";
   private static final String LOCK_NOW_KEY = "lock_now";
   private static final String SET_ACCESSIBILITY_SERVICES_KEY = "set_accessibility_services";
   private static final String SET_ALWAYS_ON_VPN_KEY = "set_always_on_vpn";
@@ -626,7 +615,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
     }
     findPreference(LOCK_SCREEN_POLICY_KEY).setOnPreferenceClickListener(this);
     findPreference(PASSWORD_CONSTRAINTS_KEY).setOnPreferenceClickListener(this);
-    findPreference(RESET_PASSWORD_KEY).setOnPreferenceClickListener(this);
+    //findPreference(RESET_PASSWORD_KEY).setOnPreferenceClickListener(this);
     findPreference(LOCK_NOW_KEY).setOnPreferenceClickListener(this);
     //findPreference(SYSTEM_UPDATE_POLICY_KEY).setOnPreferenceClickListener(this);
     findPreference(SYSTEM_UPDATE_PENDING_KEY).setOnPreferenceClickListener(this);
@@ -834,7 +823,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
     onCreateSetNewPasswordWithComplexityPreference();
     onCreateSetRequiredPasswordComplexityPreference();
     onCreateSetRequiredPasswordComplexityOnParentPreference();
-    constrainSpecialCasePreferences();
+    //constrainSpecialCasePreferences();
 
     maybeDisableLockTaskPreferences();
     loadAppFeedbackNotifications();
@@ -937,12 +926,12 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
     requiredParentComplexityPref.setOnPreferenceChangeListener(this);
   }
 
-  private void constrainSpecialCasePreferences() {
+  /*private void constrainSpecialCasePreferences() {
     // Reset password can be used in all contexts since N
     if (Util.SDK_INT >= VERSION_CODES.N) {
       ((DpcPreference) findPreference(RESET_PASSWORD_KEY)).clearNonCustomConstraints();
     }
-  }
+  }*/
 
   /**
    * Pre O, lock task APIs were only available to the Device Owner. From O, they are also available
@@ -1022,14 +1011,14 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
     } else if (SET_LOCK_TASK_FEATURES_KEY.equals(key)) {
       showFragment(new SetLockTaskFeaturesFragment());
       return true;
-    } else if (RESET_PASSWORD_KEY.equals(key)) {
-      if (Util.SDK_INT >= VERSION_CODES.O) {
-        showFragment(new ResetPasswordWithTokenFragment());
-        return true;
-      } else {
-        showResetPasswordPrompt();
-        return false;
-      }
+    //} else if (RESET_PASSWORD_KEY.equals(key)) {
+    //  if (Util.SDK_INT >= VERSION_CODES.O) {
+    //    showFragment(new ResetPasswordWithTokenFragment());
+    //    return true;
+    //  } else {
+    //    showResetPasswordPrompt();
+    //    return false;
+    //  }
     } else if (LOCK_NOW_KEY.equals(key)) {
       lockNow();
       return true;
@@ -1971,7 +1960,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
    * before any further changes and/or whether the password needs to be entered during boot to start
    * the user.
    */
-  private void showResetPasswordPrompt() {
+  /*private void showResetPasswordPrompt() {
     View dialogView =
         getActivity().getLayoutInflater().inflate(R.layout.reset_password_dialog, null);
 
@@ -2016,7 +2005,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
         .setPositiveButton(android.R.string.ok, resetListener)
         .setNegativeButton(android.R.string.cancel, null)
         .show();
-  }
+  }*/
 
   /**
    * Shows a prompt to ask for confirmation on wiping the data and also provide an option to set if
@@ -2056,7 +2045,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
   }
 
   /** Shows a prompt to ask for confirmation on removing device owner. */
-  private void showRemoveDeviceOwnerPrompt() {
+  /*private void showRemoveDeviceOwnerPrompt() {
     new AlertDialog.Builder(getActivity())
         .setTitle(R.string.remove_device_owner_title)
         .setMessage(R.string.remove_device_owner_confirmation)
@@ -2073,7 +2062,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
                     (e) -> onErrorLog("clearDeviceOwnerApp", e)))
         .setNegativeButton(android.R.string.cancel, null)
         .show();
-  }
+  }*/
 
   /** Shows a message box with the device wifi mac address. */
   /*@TargetApi(VERSION_CODES.N)
@@ -2356,12 +2345,12 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
         .show();
   }*/
 
-  private void removeUser(UserHandle userHandle) {
+  /*private void removeUser(UserHandle userHandle) {
     mDevicePolicyManagerGateway.removeUser(
         userHandle,
         (u) -> onSuccessShowToast("removeUser()", R.string.user_removed),
         (e) -> onErrorShowToast("removeUser()", e, R.string.failed_to_remove_user));
-  }
+  }*/
 
   /**
    * For user removal: If the device is P or above, shows a prompt for choosing a user to be
@@ -2426,7 +2415,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
   }
 
   /** Shows a prompt for choosing a user. The callback will be invoked with chosen user. */
-  @TargetApi(VERSION_CODES.P)
+  /*@TargetApi(VERSION_CODES.P)
   private void showChooseUserPrompt(int titleResId, UserCallback callback) {
     if (getActivity() == null || getActivity().isFinishing()) {
       return;
@@ -2445,7 +2434,7 @@ public class PolicyManagementFragment extends BaseSearchablePolicyPreferenceFrag
               (dialog, position) -> callback.onUserChosen(secondaryUsers.get(position)))
           .show();
     }
-  }
+  }*/
 
   /** Logout the current user. */
   @TargetApi(VERSION_CODES.P)

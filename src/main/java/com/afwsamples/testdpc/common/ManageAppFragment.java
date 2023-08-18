@@ -38,8 +38,8 @@ public abstract class ManageAppFragment extends BaseManageComponentFragment<Appl
   protected SpinnerAdapter createSpinnerAdapter() {
     List<ApplicationInfo> managedAppList = getInstalledOrLaunchableApps();
     Collections.sort(managedAppList, new ApplicationInfo.DisplayNameComparator(mPackageManager));
-    return new AppInfoSpinnerAdapter(
-        getActivity(), R.layout.app_row, R.id.pkg_name, managedAppList);
+    return null;//new AppInfoSpinnerAdapter(
+        //getActivity(), R.layout.app_row, R.id.pkg_name, managedAppList);
   }
 
   /**

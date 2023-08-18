@@ -43,7 +43,7 @@
             testdpc:minSdkVersion="L" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/set_time_manage">
+    <!--2<PreferenceCategory android:title="@string/set_time_manage">-->
         <!--<com.afwsamples.testdpc.common.preference.DpcPreference
             android:key="set_time"
             android:title="@string/set_time"
@@ -54,7 +54,7 @@
             android:title="@string/set_time_zone"
             testdpc:admin="deviceOwner|orgOwnedProfileOwner"
             testdpc:minSdkVersion="P" />-->
-    </PreferenceCategory>
+    <!--2</PreferenceCategory>-->
 
     <PreferenceCategory android:title="@string/set_system_setting">
         <com.afwsamples.testdpc.common.preference.DpcPreference
@@ -79,13 +79,13 @@
             testdpc:minSdkVersion="S" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/override_apn_title">
+    <!--2<PreferenceCategory android:title="@string/override_apn_title">-->
         <!--<com.afwsamples.testdpc.common.preference.DpcPreference
             android:key="manage_override_apn"
             android:title="@string/manage_override_apn"
             testdpc:admin="deviceOwner"
             testdpc:minSdkVersion="P" />-->
-    </PreferenceCategory>
+    <!--2</PreferenceCategory>-->
 
     <PreferenceCategory android:title="@string/cross_profile_calendar">
         <com.afwsamples.testdpc.common.preference.DpcPreference
@@ -429,13 +429,13 @@
             android:title="@string/password_constraints"
             testdpc:minSdkVersion="L" />
         <!-- custom constraint: ClearConstraintsSinceN -->
-        <com.afwsamples.testdpc.common.preference.DpcPreference
+        <!--3<com.afwsamples.testdpc.common.preference.DpcPreference
             android:dialogTitle="@string/reset_password"
             android:inputType="textPassword"
             android:key="reset_password"
             android:title="@string/reset_password"
             testdpc:admin="deviceOwner"
-            testdpc:minSdkVersion="L" />
+            testdpc:minSdkVersion="L" />-->
         <com.afwsamples.testdpc.common.preference.DpcPreference
             android:key="lock_now"
             android:title="@string/lock_now"
@@ -509,14 +509,14 @@
             testdpc:user="managedProfile" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/bind_device_admin_category_title">
+    <!--2<PreferenceCategory android:title="@string/bind_device_admin_category_title">-->
         <!-- custom constraint: bindDeviceAdminTargetUsers == 1 -->
         <!--<com.afwsamples.testdpc.common.preference.DpcPreference
             android:key="bind_device_admin_policies"
             android:title="@string/bind_device_admin_policy_title"
             testdpc:admin="deviceOwner"
             testdpc:minSdkVersion="O" />-->
-    </PreferenceCategory>
+    <!--2</PreferenceCategory>-->
 
     <PreferenceCategory android:title="@string/networking_management_title">
         <com.afwsamples.testdpc.common.preference.DpcPreference
