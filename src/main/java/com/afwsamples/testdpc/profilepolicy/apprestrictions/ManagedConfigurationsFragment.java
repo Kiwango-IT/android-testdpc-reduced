@@ -31,6 +31,7 @@ import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -324,6 +325,10 @@ public class ManagedConfigurationsFragment extends ManageAppFragment
 
   @Override
   protected void onSpinnerItemSelected(ApplicationInfo appInfo) {
+    if (appInfo == null){
+      Log.w("ManagedConfigurationsFragment", "ApplicationInfo is null.");
+      return;
+    }
     String pkgName = appInfo.packageName;
     if (!TextUtils.isEmpty(pkgName)) {
       Bundle bundle = mDevicePolicyManager.getApplicationRestrictions(mAdminComponent, pkgName);
@@ -335,6 +340,10 @@ public class ManagedConfigurationsFragment extends ManageAppFragment
   /** Return the name of the application whose restrictions are currently displayed. */
   private String getCurrentAppName() {
     ApplicationInfo applicationInfo = (ApplicationInfo) mManagedAppsSpinner.getSelectedItem();
+    if (applicationInfo == null){
+      Log.w("ManagedConfigurationsFragment", "ApplicationInfo is null.");
+      return "";
+    }
     return (String) getActivity().getPackageManager().getApplicationLabel(applicationInfo);
   }
 
@@ -365,6 +374,10 @@ public class ManagedConfigurationsFragment extends ManageAppFragment
 
   @Override
   protected void saveConfig() {
+    if (mManagedAppsSpinner.getSelectedItem() == null){
+      Log.w("ManagedConfigurationsFragment", "ApplicationInfo is null.");
+      return;
+    }
     String pkgName = ((ApplicationInfo) mManagedAppsSpinner.getSelectedItem()).packageName;
     mDevicePolicyManager.setApplicationRestrictions(
         mAdminComponent,
@@ -377,11 +390,19 @@ public class ManagedConfigurationsFragment extends ManageAppFragment
   @Override
   protected void resetConfig() {
     mAppRestrictionsArrayAdapter.clear();
+    if (mLastRestrictionEntries == null){
+      Log.w("ManagedConfigurationsFragment", "mLastRestrictionEntries is null.");
+      return;
+    }
     mAppRestrictionsArrayAdapter.addAll(mLastRestrictionEntries);
   }
 
   @Override
   protected void loadDefault() {
+    if (mManagedAppsSpinner.getSelectedItem() == null){
+      Log.w("ManagedConfigurationsFragment", "ApplicationInfo is null.");
+      return;
+    }
     loadManifestAppRestrictions(
         ((ApplicationInfo) mManagedAppsSpinner.getSelectedItem()).packageName);
   }

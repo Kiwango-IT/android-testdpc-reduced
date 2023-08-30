@@ -139,6 +139,10 @@ public class DelegationFragment extends ManageAppFragment {
 
   @Override
   protected void onSpinnerItemSelected(ApplicationInfo info) {
+    if (info == null){
+      Log.w(TAG, "ApplicationInfo is null.");
+      return;
+    }
     final String pkgName = info.packageName;
     if (pkgName == null) {
       return;
@@ -162,7 +166,12 @@ public class DelegationFragment extends ManageAppFragment {
     }
     // Get selected package name.
     final ApplicationInfo info = (ApplicationInfo) mManagedAppsSpinner.getSelectedItem();
+    if (info == null){
+      Log.w(TAG, "ApplicationInfo is null.");
+      return;
+    }
     final String pkgName = info.packageName;
+
 
     // Update model from changes in the UI and get the scopes that are to be delegated.
     final List<String> scopes = readScopesFromUi();

@@ -78,6 +78,10 @@ public class ManageAppPermissionsFragment extends ManageAppFragment {
 
   @Override
   protected void onSpinnerItemSelected(ApplicationInfo appInfo) {
+    if (appInfo == null){
+      Log.w(TAG, "ApplicationInfo is null.");
+      return;
+    }
     String pkgName = appInfo.packageName;
     if (!TextUtils.isEmpty(pkgName)) {
       List<String> permissions = new ArrayList<String>();
