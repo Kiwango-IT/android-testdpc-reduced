@@ -29,11 +29,7 @@ public class IndexableFragments {
     sIndexableFragments.add(
         new XmlIndexableFragment(
             PasswordConstraintsFragment.class, R.xml.password_constraint_preferences));
-    //sIndexableFragments.add(
-    //    new XmlIndexableFragment(BindDeviceAdminFragment.class, R.xml.bind_device_admin_policies));
     sIndexableFragments.add(new UserRestrictionIndexableFragment());
-    //sIndexableFragments.add(
-    //    new XmlIndexableFragment(OverrideApnFragment.class, R.xml.override_apn_preferences));
   }
 
   public static List<BaseIndexableFragment> values() {

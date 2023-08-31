@@ -3,7 +3,6 @@ package com.afwsamples.testdpc.policy;
 import static android.os.UserManager.ALLOW_PARENT_PROFILE_APP_LINKING;
 import static android.os.UserManager.DISALLOW_ADD_MANAGED_PROFILE;
 import static android.os.UserManager.DISALLOW_ADD_USER;
-//import static android.os.UserManager.DISALLOW_ADD_WIFI_CONFIG;
 import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
 import static android.os.UserManager.DISALLOW_AIRPLANE_MODE;
 import static android.os.UserManager.DISALLOW_AMBIENT_DISPLAY;
@@ -11,8 +10,6 @@ import static android.os.UserManager.DISALLOW_APPS_CONTROL;
 import static android.os.UserManager.DISALLOW_AUTOFILL;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
 import static android.os.UserManager.DISALLOW_BLUETOOTH_SHARING;
-//import static android.os.UserManager.DISALLOW_CAMERA_TOGGLE;
-//import static android.os.UserManager.DISALLOW_CHANGE_WIFI_STATE;
 import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 import static android.os.UserManager.DISALLOW_CONFIG_BRIGHTNESS;
 import static android.os.UserManager.DISALLOW_CONFIG_CELL_BROADCASTS;
@@ -36,7 +33,6 @@ import static android.os.UserManager.DISALLOW_FUN;
 import static android.os.UserManager.DISALLOW_INSTALL_APPS;
 import static android.os.UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES;
 import static android.os.UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES_GLOBALLY;
-//import static android.os.UserManager.DISALLOW_MICROPHONE_TOGGLE;
 import static android.os.UserManager.DISALLOW_MODIFY_ACCOUNTS;
 import static android.os.UserManager.DISALLOW_MOUNT_PHYSICAL_MEDIA;
 import static android.os.UserManager.DISALLOW_NETWORK_RESET;
@@ -57,9 +53,6 @@ import static android.os.UserManager.DISALLOW_UNIFIED_PASSWORD;
 import static android.os.UserManager.DISALLOW_UNINSTALL_APPS;
 import static android.os.UserManager.DISALLOW_UNMUTE_MICROPHONE;
 import static android.os.UserManager.DISALLOW_USB_FILE_TRANSFER;
-//import static android.os.UserManager.DISALLOW_USER_SWITCH;
-//import static android.os.UserManager.DISALLOW_WIFI_DIRECT;
-//import static android.os.UserManager.DISALLOW_WIFI_TETHERING;
 import static android.os.UserManager.ENSURE_VERIFY_APPS;
 
 import com.afwsamples.testdpc.R;
@@ -81,7 +74,6 @@ public class UserRestriction {
     new UserRestriction(DISALLOW_ADJUST_VOLUME, R.string.disallow_adjust_volume),
     new UserRestriction(DISALLOW_APPS_CONTROL, R.string.disallow_apps_control),
     new UserRestriction(DISALLOW_BLUETOOTH, R.string.disallow_bluetooth),
-    //new UserRestriction(DISALLOW_CHANGE_WIFI_STATE, R.string.disallow_change_wifi_state),
     new UserRestriction(DISALLOW_CONFIG_BLUETOOTH, R.string.disallow_config_bluetooth),
     new UserRestriction(DISALLOW_CONFIG_CELL_BROADCASTS, R.string.disallow_config_cell_broadcasts),
     new UserRestriction(DISALLOW_CONFIG_CREDENTIALS, R.string.disallow_config_credentials),
@@ -122,7 +114,6 @@ public class UserRestriction {
     new UserRestriction(DISALLOW_AUTOFILL, R.string.disallow_autofill),
     new UserRestriction(DISALLOW_BLUETOOTH_SHARING, R.string.disallow_bluetooth_sharing),
     new UserRestriction(DISALLOW_UNIFIED_PASSWORD, R.string.disallow_unified_password),
-    //new UserRestriction(DISALLOW_USER_SWITCH, R.string.disallow_user_switch),
     new UserRestriction(DISALLOW_CONFIG_LOCATION, R.string.disallow_config_location),
     new UserRestriction(DISALLOW_AIRPLANE_MODE, R.string.disallow_airplane_mode),
     new UserRestriction(DISALLOW_CONFIG_BRIGHTNESS, R.string.disallow_config_brightness),
@@ -133,13 +124,8 @@ public class UserRestriction {
         DISALLOW_SHARE_INTO_MANAGED_PROFILE, R.string.disallow_share_into_work_profile),
     new UserRestriction(DISALLOW_PRINTING, R.string.disallow_printing),
     new UserRestriction(DISALLOW_CONFIG_PRIVATE_DNS, R.string.disallow_config_private_dns),
-    //new UserRestriction(DISALLOW_MICROPHONE_TOGGLE, R.string.disallow_microphone_toggle),
-    //new UserRestriction(DISALLOW_CAMERA_TOGGLE, R.string.disallow_camera_toggle),
-    //new UserRestriction(DISALLOW_WIFI_TETHERING, R.string.disallow_wifi_tethering),
     new UserRestriction(
         DISALLOW_SHARING_ADMIN_CONFIGURED_WIFI, R.string.disallow_sharing_admin_configured_wifi),
-    //new UserRestriction(DISALLOW_WIFI_DIRECT, R.string.disallow_wifi_direct),
-    //new UserRestriction(DISALLOW_ADD_WIFI_CONFIG, R.string.disallow_add_wifi_config),
   };
 
   /**
@@ -153,7 +139,6 @@ public class UserRestriction {
     new UserRestriction(DISALLOW_DEBUGGING_FEATURES, R.string.disallow_debugging_features),
     new UserRestriction(DISALLOW_BLUETOOTH, R.string.disallow_bluetooth),
     new UserRestriction(DISALLOW_BLUETOOTH_SHARING, R.string.disallow_bluetooth_sharing),
-    //new UserRestriction(DISALLOW_CHANGE_WIFI_STATE, R.string.disallow_change_wifi_state),
     new UserRestriction(DISALLOW_CONFIG_BLUETOOTH, R.string.disallow_config_bluetooth),
     new UserRestriction(DISALLOW_CONFIG_CELL_BROADCASTS, R.string.disallow_config_cell_broadcasts),
     new UserRestriction(DISALLOW_CONFIG_LOCATION, R.string.disallow_config_location),
@@ -170,9 +155,6 @@ public class UserRestriction {
     new UserRestriction(DISALLOW_MOUNT_PHYSICAL_MEDIA, R.string.disallow_mount_physical_media),
     new UserRestriction(DISALLOW_OUTGOING_CALLS, R.string.disallow_outgoing_calls),
     new UserRestriction(DISALLOW_UNMUTE_MICROPHONE, R.string.disallow_unmute_microphone),
-    //new UserRestriction(DISALLOW_WIFI_TETHERING, R.string.disallow_wifi_tethering),
-    //new UserRestriction(DISALLOW_WIFI_DIRECT, R.string.disallow_wifi_direct),
-    //new UserRestriction(DISALLOW_ADD_WIFI_CONFIG, R.string.disallow_add_wifi_config),
   };
 
   /** Setting these user restrictions only have effect on primary users. */
@@ -205,13 +187,6 @@ public class UserRestriction {
 
   /** User restrictions that cannot be set by profile owners. Applied to all users. */
   public static final String[] DEVICE_OWNER_ONLY_RESTRICTIONS = {
-    //DISALLOW_USER_SWITCH,
-    //DISALLOW_MICROPHONE_TOGGLE,
-    //DISALLOW_CAMERA_TOGGLE,
-    //DISALLOW_CHANGE_WIFI_STATE,
-    //DISALLOW_WIFI_TETHERING,
-    //DISALLOW_WIFI_DIRECT,
-    //DISALLOW_ADD_WIFI_CONFIG,
   };
 
   /** Setting these user restrictions only have effect on managed profiles. */
@@ -253,7 +228,6 @@ public class UserRestriction {
   public static String[] PIC_PLUS_RESTRICTIONS = {
     DISALLOW_UNIFIED_PASSWORD,
     DISALLOW_SYSTEM_ERROR_DIALOGS,
-    //DISALLOW_USER_SWITCH,
     DISALLOW_CONFIG_LOCATION,
     DISALLOW_AIRPLANE_MODE,
     DISALLOW_CONFIG_DATE_TIME,
@@ -269,15 +243,9 @@ public class UserRestriction {
   };
 
   public static String[] SC_PLUS_RESTRICTIONS = {
-    //DISALLOW_MICROPHONE_TOGGLE,
-    //DISALLOW_CAMERA_TOGGLE,
   };
 
   public static String[] TM_PLUS_RESTRICTIONS = {
-    //DISALLOW_CHANGE_WIFI_STATE,
-    //DISALLOW_WIFI_TETHERING,
     DISALLOW_SHARING_ADMIN_CONFIGURED_WIFI,
-    //DISALLOW_WIFI_DIRECT,
-    //DISALLOW_ADD_WIFI_CONFIG,
   };
 }

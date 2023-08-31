@@ -129,35 +129,12 @@
     <!-- Strings for device owner management -->
     <string name="device_owner_management">Device owner management</string>
     <string name="set_auto_time_required">Set auto (network) time required</string>
-    <!--<string name="set_auto_time">Set auto (network) time</string>-->
-    <!--<string name="set_auto_time_zone">Set auto (network) time zone</string>-->
     <string name="wipe_data">Wipe data</string>
     <string name="wipe_data_title">Wipe data?</string>
     <string name="wipe_data_confirmation">Are you sure you want to wipe the data?</string>
     <string name="wipe_data_include">Also wipe:</string>
     <string name="external_storage">External storage</string>
     <string name="reset_protection_data">Factory reset protection</string>
-    <!--<string name="remove_device_owner">Remove this device owner</string>-->
-    <!--2<string name="remove_device_owner_title">Remove device owner?</string>-->
-    <!--2<string name="remove_device_owner_confirmation">Policies and restrictions will continue to be
-        active and may require a factory reset to clear.</string>-->
-    <!--2<string name="device_owner_removed">This app is no longer a device owner.</string>-->
-    <!-- Corporate-owned work profile falls under device owner management, for convenience. -->
-    <!--<string name="factory_reset_org_owned">Factory reset Org-Owned Work Profile device</string>-->
-    <!--<string name="set_factory_reset_protection_policy">Set factory reset protection policy</string>-->
-    <!--2<string name="factory_reset_protection_policy">Factory reset protection policy</string>-->
-    <!--2<string name="factory_reset_protection_policy_accounts">Accounts</string>-->
-    <!--2<string name="factory_reset_protection_policy_enabled">Enabled</string>-->
-    <!--2<string-array name="factory_reset_protection_policy_enabled_choices">
-        <item>Disabled</item>
-        <item>Enabled</item>
-    </string-array>-->
-    <!--2<string name="cleared_factory_reset_protection_policy">Cleared factory reset protection policy</string>-->
-    <!--2<string name="saved_factory_reset_protection_policy">Saved factory reset protection policy</string>-->
-
-    <!-- Strings for device reboot -->
-    <!--<string name="reboot">Reboot device</string>-->
-    <!--2<string name="reboot_error_msg">Cannot reboot device during an ongoing call.</string>-->
 
     <!-- Strings for cross-profile intent filters -->
     <string name="cross_profile_intents">Cross-profile intents</string>
@@ -186,7 +163,6 @@
     <string name="camera_title">Camera, screen capture and audio</string>
     <string name="display_media">Display Media</string>
     <string name="disable_camera">Disable camera</string>
-    <!--<string name="disable_camera_on_parent">Disable camera on parent</string>-->
     <string name="capture_image">Capture image</string>
     <string name="capture_video">Capture video</string>
     <string name="camera_app_not_found">Ensure that a camera app is enabled</string>
@@ -194,7 +170,6 @@
     <string name="stop_button_label">Stop</string>
     <string name="delete_button_label">Delete</string>
     <string name="disable_screen_capture">Disable screen capture</string>
-    <!--<string name="disable_screen_capture_on_parent">Disable screen capture on parent</string>-->
     <string name="mute_audio">Mute audio</string>
 
     <!-- Stings for work profile management -->
@@ -227,34 +202,7 @@
     <string name="disable_cross_profile_contacts_search">Disable cross-profile contacts search</string>
 
     <!-- Strings for APN -->
-    <!--2<string name="override_apn_title">Override APN management</string>-->
-    <!--<string name="manage_override_apn">Manage override APNs</string>-->
-    <!--2<string name="insert_override_apn">Insert override APN</string>-->
-    <!--2<string name="insert_override_apn_error">Fail to insert override APN, format incorrect</string>-->
-    <!--2<string name="remove_override_apn">Remove all override APNs</string>-->
-    <!--2<string name="enable_override_apn">Enable override APNs</string>-->
-    <!--2<string name="apn_entry_name">Entry name</string>-->
-    <!--2<string name="apn_apn_name">APN name</string>-->
-    <!--2<string name="apn_proxy">Proxy address</string>-->
-    <!--2<string name="apn_port">Proxy port</string>-->
-    <!--2<string name="apn_mmsc">MMSC</string>-->
-    <!--2<string name="apn_mmsproxy">MMS proxy address</string>-->
-    <!--2<string name="apn_mmsport">MMS proxy port</string>-->
-    <!--2<string name="apn_user">User</string>-->
-    <!--2<string name="apn_password">Password</string>-->
-    <!--2<string name="apn_auth_type">Authentication type</string>-->
-    <!--2<string name="apn_type">Apn type bitmask</string>-->
-    <!--2<string name="apn_numeric">Operator numeric(MCC+MNC)</string>-->
-    <!--2<string name="apn_protocol">Protocol</string>-->
-    <!--2<string name="apn_roaming_protocol">Roaming protocol</string>-->
-    <!--2<string name="apn_carrier_enabled">Carrier enabled</string>-->
-    <!--2<string name="apn_network_bitmask">Network type bitmask</string>-->
-    <!--2<string name="apn_mvno_type">MVNO type</string>-->
-    <!--2<string name="apn_numeric_hint">Numeric=MCC+MNC</string>-->
-
-    <!--2<string name="apn_entry_name_cannot_be_empty">Entry name cannot be empty</string>-->
     <string name="apn_name_cannot_be_empty">APN name cannot be empty</string>
-    <!--2<string name="apn_type_cannot_be_zero">Apn type bitmask cannot be empty or zero</string>-->
     <string name="apn_wrong_url">Cannot parse mmsc</string>
     <string name="apn_wrong_inetaddress">Cannot parse proxy address or MMS proxy address</string>
     <string name="apn_wrong_port">Cannot parse proxy port or MMS proxy port</string>
@@ -264,44 +212,6 @@
     <string name="cross_profile_calendar_set_allowed_packages">Set allowed packages</string>
     <string name="cross_profile_calendar_set_allowed_packages_title">Enter packages names, separated by comma</string>
     <string name="cross_profile_calendar_allow_all_packages">Allow all packages</string>
-
-    <!--2<string-array name="apn_auth_type_choices">
-        <item>Not specified</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>NONE</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>PAP</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>CHAP</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>PAP or CHAP</item>
-    </string-array>-->
-    <!--2<string-array name="apn_protocol_choices">
-        <item>Not specified</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>IP</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>IPV6</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>IPV4V6</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>PPP</item>
-    </string-array>-->
-    <!--2<string-array name="apn_mvno_type_choices">
-        <item>Not specified</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>SPN</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>IMSI</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>GID</item>-->
-        <!-- Do not translate. -->
-        <!--2<item>ICCID</item>
-    </string-array>-->
-    <!--2<string-array name="apn_carrier_enabled_choices">
-        <item>Disabled</item>
-        <item>Enabled</item>
-    </string-array>-->
 
     <!-- Strings for wifi management -->
     <string name="wifi_management_title">WI-FI management</string>
@@ -326,13 +236,8 @@
     <string name="wifi_cancel">Cancel</string>
     <string name="wifi_config_success">WI-FI configuration saved.</string>
     <string name="wifi_config_fail">Failed to save the WI-FI configuration.</string>
-    <!--<string name="enable_wifi_config_lockdown">DO created WI-FI configs are modifiable only by DO</string>-->
     <string name="modify_wifi_configuration">Modify WI-FI configuration</string>
     <string name="modify_owned_wifi_configuration">Modify Owned WI-FI configuration</string>
-    <!--<string name="remove_not_owned_wifi_configurations">Remove all networks not owned by DO</string>-->
-    <!--<string name="show_wifi_mac_address">Show Wi-Fi MAC address</string>-->
-    <!--2<string name="show_wifi_mac_address_title">Wi-Fi MAC address</string>-->
-    <!--2<string name="show_wifi_mac_address_not_available_msg">Wi-Fi MAC is not available</string>-->
     <string name="wifi_configs_header">Saved WI-FI configurations</string>
     <string name="wifi_update_config_button">Update selected</string>
     <string name="wifi_remove_config_button">Remove selected</string>
@@ -354,15 +259,6 @@
     <string name="error_cannot_grant_to_wifi">Failed to allow Wi-Fi auth with client key pair</string>
     <string name="wifi_eap_tls_dialog_message">EAP_TLS with X.509 CA certificate and PKCS12 client certificate</string>
     <string name="wifi_unknown_cert">Unknown cert</string>
-    <!--<string name="set_wifi_min_security_level">Set WI-FI minimum security level</string>-->
-    <!--2<string name="security_level_open">Open</string>-->
-    <!--2<string name="security_level_personal">Personal</string>-->
-    <!--2<string name="security_level_enterprise_eap">Enterprise EAP</string>-->
-    <!--2<string name="security_level_enterprise_192">Enterprise 192</string>-->
-    <!--2<string name="type_allowlist">Allowlist</string>-->
-    <!--2<string name="type_denylist">Denylist</string>-->
-    <!--2<string name="ssid_list_description">Enter comma separated SSIDs - empty list to remove</string>-->
-    <!--<string name="set_wifi_ssid_restriction">Set WI-FI SSID restriction list</string>-->
 
     <!-- Strings for managing apps -->
     <string name="apps_management_title">Apps management</string>
@@ -387,7 +283,6 @@
     <string name="install_apk_package_title">Install package from APK file</string>
     <string name="uninstall_packages_title">Uninstall package</string>
     <string name="hide_apps_title">Hide apps</string>
-    <!--<string name="hide_apps_parent_title">Hide apps on parent</string>-->
     <string name="hide_apps_empty">All apps are hidden.</string>
     <string name="hide_apps_success">%s is now hidden.</string>
     <string name="hide_apps_failure">%s cannot be hidden, because it is an active admin or
@@ -395,7 +290,6 @@
     <string name="hide_apps_system_failure">%s cannot be hidden, because the provided package
         is not a system package.</string>
     <string name="unhide_apps_title">Unhide apps</string>
-    <!--<string name="unhide_apps_parent_title">Unhide apps on parent</string>-->
     <string name="unhide_apps_empty">No apps are currently hidden.</string>
     <string name="unhide_apps_success">%s is no longer hidden.</string>
     <string name="unhide_apps_failure">%s cannot be unhidden.</string>
@@ -446,7 +340,6 @@
     <string name="reenable_keyguard">Reenable keyguard</string>
     <string name="kiosk_mode">Kiosk mode</string>
     <string name="kiosk_select_title">Select kiosk apps</string>
-    <!--<string name="start_kiosk_mode">Start kiosk mode</string>-->
     <string name="stop_kiosk_mode">Stop kiosk mode</string>
     <string name="setup_cosu">Setting up your COSU device\u2026</string>
     <string name="setup_cosu_success">COSU device successfully set up</string>
@@ -457,7 +350,6 @@
 
     <!-- Strings for user restriction management -->
     <string name="user_restrictions_preference_title">Set user restrictions</string>
-    <!--<string name="user_restrictions_parent_preference_title">Set user restrictions on parent</string>-->
     <string name="user_restrictions_management_title">User restrictions</string>
     <string name="allow_parent_profile_app_linking">Allow web links to apps of the parent</string>
     <string name="disallow_add_managed_profile">Disallow add managed profile</string>
@@ -466,10 +358,6 @@
     <string name="disallow_apps_control">Disallow apps control</string>
     <string name="disallow_bluetooth">Disallow bluetooth</string>
     <string name="disallow_bluetooth_sharing">Disallow bluetooth sharing</string>
-    <!--<string name="disallow_change_wifi_state">Disallow change Wi-Fi state</string>-->
-    <!--<string name="disallow_wifi_tethering">Disallow Wi-Fi tethering</string>-->
-    <!--<string name="disallow_wifi_direct">Disallow Wi-Fi direct</string>-->
-    <!--<string name="disallow_add_wifi_config">Disallow add Wi-Fi config</string>-->
     <string name="disallow_sharing_admin_configured_wifi">Disallow sharing admin configured Wi-Fi</string>
     <string name="disallow_config_bluetooth">Disallow config bluetooth</string>
     <string name="disallow_config_cell_broadcasts">Disallow config cell broadcasts</string>
@@ -507,12 +395,9 @@
     <string name="disallow_uninstall_apps">Disallow uninstall apps</string>
     <string name="disallow_unmute_microphone">Disallow unmute microphone</string>
     <string name="disallow_usb_file_transfer">Disallow usb file transfer</string>
-    <!--<string name="disallow_microphone_toggle">Disallow microphone toggle</string>-->
-    <!--<string name="disallow_camera_toggle">Disallow camera toggle</string>-->
     <string name="ensure_verify_apps">Ensure verify apps</string>
     <string name="disallow_autofill">Disallow autofill</string>
     <string name="disallow_unified_password">Require separate challenge</string>
-    <!--<string name="disallow_user_switch">Disallow user switch</string>-->
     <string name="disallow_config_location">Disallow config location</string>
     <string name="disallow_airplane_mode">Disallow airplane mode</string>
     <string name="disallow_config_brightness">Disallow config brightness</string>
@@ -663,7 +548,6 @@
 
     <!-- Remote bugreport -->
     <string name="bugreport_title">Bugreport</string>
-    <!--<string name="request_bugreport">Request bugreport</string>-->
     <string name="received_bugreport">Received bugreport %1$s hash: %2$s bytes: %3$d</string>
     <string name="received_bugreport_failed_retrieval">Received bugreport file, but failed to retrieve it</string>
     <string name="bugreport_sharing_declined">User declined sharing bugreport</string>
@@ -675,16 +559,6 @@
 
     <!-- Backup and Restore for Device Owner -->
     <string name="enable_backup_service">Enable backup service</string>
-
-    <!--<string name="common_criteria_mode">Enable Common Criteria mode</string>-->
-
-    <!--<string name="enable_usb_data_signaling">Enable USB data signaling</string>-->
-
-    <!-- Suspension of personal apps -->
-    <!--<string name="suspend_personal_apps">Suspend personal apps</string>-->
-
-    <!-- Maximum time work profile is allowed to be off -->
-    <!--<string name="profile_max_time_off">Work profile max time off (seconds)</string>-->
 
     <!-- Enterprise security logging -->
     <string name="enable_security_logging">Enable security logging</string>
@@ -718,13 +592,9 @@
     <!-- Input method -->
     <string name="input_methods_title">Input methods</string>
     <string name="set_input_methods">Set input methods</string>
-    <!--<string name="set_input_methods_on_parent">Set input methods on parent</string>-->
     <string name="set_input_methods_successful">The given list of input methods is enabled</string>
     <string name="set_input_methods_fail">Cannot disallow input methods enabled by the primary user</string>
     <string name="all_input_methods_enabled">All input methods are enabled.</string>
-    <!--2<string name="add_input_method_on_parent_fail">Failed to add input method on parent</string>-->
-    <!--2<string name="all_input_methods_on_parent">Allowed all input methods on parent</string>-->
-    <!--2<string name="system_input_methods_on_parent">Allowed only system input methods on parent</string>-->
     <string name="input_methods_all">Allow all input methods</string>
     <string name="input_methods_system">Allow only system input methods</string>
 
@@ -756,34 +626,10 @@
 
     <!-- User management -->
     <string name="user_management">User management</string>
-    <!--2<string name="create_and_initialize_user">Create and initialize user</string>-->
-    <!--<string name="create_and_manage_user">Create and manage user</string>-->
-    <!--<string name="create_managed_profile">Create managed profile</string>-->
-    <!--2<string name="skip_setup_wizard">Skip setup wizard</string>-->
-    <!--2<string name="make_user_ephemeral">Make user ephemeral</string>-->
-    <!--<string name="start_user_in_background">Start user in background</string>-->
-    <!--2<string name="user_started_in_background">User started in background.</string>-->
-    <!--2<string name="failed_to_start_user_in_background">Failed to start user in background.</string>-->
-    <!--2<string name="leave_all_system_apps_enabled">Leave all system apps enabled</string>-->
-    <!--2<string name="user_created">Successfully created user with serial number %1$d.</string>-->
     <string name="user_string">User %1$d</string>
-    <!--2<string name="enter_username_hint">Enter a username</string>-->
-    <!--2<string name="failed_to_create_user">Failed to create user.</string>-->
-    <!--2<string name="enter_user_id">Enter a user serial number</string>-->
-    <!--2<string name="remove_user">Remove user</string>-->
-    <!--2<string name="user_removed">User removed.</string>-->
-    <!--2<string name="failed_to_remove_user">Failed to remove user.</string>-->
-    <!--<string name="switch_user">Switch user</string>-->
-    <!--2<string name="user_switched">User switched.</string>-->
-    <!--2<string name="failed_to_switch_user">Failed to switch user.</string>-->
-    <!--<string name="stop_user">Stop user</string>-->
-    <!--2<string name="user_stopped">User stopped.</string>-->
-    <!--2<string name="failed_to_stop_user">Failed to stop user.</string>-->
     <string name="logout_user">Logout user</string>
     <string name="user_logouted">User logouted.</string>
     <string name="failed_to_logout_user">Failed to logout user.</string>
-    <!--<string name="enable_logout">Enable logout</string>-->
-    <!--<string name="set_user_session_message">Set user session message</string>-->
     <string name="enter_start_session_message">Enter start session message</string>
     <string name="enter_end_session_message">Enter end session message</string>
     <string name="affiliated_user">Affiliated user</string>
@@ -798,7 +644,6 @@
     <string name="on_user_started_message">User with serial number %1$d started.</string>
     <string name="on_user_stopped_message">User with serial number %1$d stopped.</string>
     <string name="on_user_switched_message">User with serial number %1$d switched.</string>
-    <!--2<string name="no_secondary_users_available">No secondary users available.</string>-->
 
     <!-- Affiliation ids -->
     <string name="manage_affiliation_ids">Manage affiliation ids</string>
@@ -823,19 +668,6 @@
 
     <!--  Strings for system update policy -->
     <string name="system_update_management">System update</string>
-    <!--<string name="system_update_policy">Manage system update policy</string>-->
-    <!--2<string name="system_update_policy_automatic">Automatic immediate install</string>-->
-    <!--2<string name="system_update_policy_Windowed">Install within a maintenance window</string>-->
-    <!--2<string name="system_update_policy_postpone">Postpone</string>-->
-    <!--2<string name="system_update_policy_none">None</string>-->
-    <!--2<string name="current_system_update_policy">Current system update policy:</string>-->
-    <!--2<string name="system_update_policy_window_start_label">Maintenance window start:</string>-->
-    <!--2<string name="system_update_policy_window_end_label">Maintenance window end:</string>-->
-    <!--2<string name="system_update_policy_set_policy">Set new policy</string>-->
-    <!--2<string name="system_update_policy_window_freeze_period_label">Freeze Periods:</string>-->
-    <!--2<string name="system_update_policy_add_freeze_period">Add new period</string>-->
-    <!--2<string name="system_update_policy_pick_start_free_period_title">Pick start of freeze period</string>-->
-    <!--2<string name="system_update_policy_pick_end_free_period_title">Pick end of freeze period</string>-->
 
     <!-- Strings for pending update info checking -->
     <string name="system_update_pending">Check pending system update</string>
@@ -862,24 +694,6 @@
     <string name="excluded_apps">Excluded apps</string>
     <string name="submit">submit</string>
     <string name="submit_title">submit_title</string>
-    <!--<string name="set_global_http_proxy">Set global HTTP proxy</string>-->
-    <!--<string name="clear_global_http_proxy">Clear global HTTP proxy</string>-->
-    <!--2<string name="networking_proxy_host">Host</string>-->
-    <!--2<string name="networking_proxy_host_hint">Enter the host</string>-->
-    <!--2<string name="networking_proxy_port">Port</string>-->
-    <!--2<string name="networking_proxy_port_hint">Enter the port</string>-->
-    <!--2<string name="no_host">No host specified.</string>-->
-    <!--2<string name="no_port">No port specified.</string>-->
-    <!--2<string name="port_out_of_range">Port out of range.</string>-->
-    <!--<string name="set_global_private_dns">Set Private DNS Mode</string>-->
-    <!--2<string name="current_private_dns_mode">Current Mode</string>-->
-    <!--2<string name="private_dns_mode_off">Off</string>-->
-    <!--2<string name="private_dns_mode_automatic">Automatic</string>-->
-    <!--2<string name="private_dns_mode_specific_host">Specified Host</string>-->
-    <!--2<string name="private_dns_mode_unknown">Unknown</string>-->
-    <!--2<string name="private_dns_mode_apply">Set</string>-->
-    <!--<string name="setting_private_dns_succeess">Success setting Private DNS</string>-->
-    <!--2<string name="setting_private_dns_failure">FAILED: %s</string>-->
 
     <!--  Strings for data usage -->
     <string name="data_usage">Data usage</string>
@@ -944,16 +758,6 @@
     <!-- Trust agent features -->
     <string name="trust_agent_features">Trust agent features</string>
     <string name="set_trust_agent_config">Set trust agent config</string>
-
-    <!-- Strings for set time -->
-    <!--2<string name="set_time_manage">Set time and timezone</string>-->
-    <!--<string name="set_time">Set time(Unix timestamp in milliseconds)</string>-->
-    <!--2<string name="no_set_time">Time not specified</string>-->
-    <!--2<string name="invalid_set_time">Incorrect time</string>-->
-    <!--<string name="set_time_zone">Set timezone</string>-->
-    <!--2<string name="set_time_zone_hint">Example: "America/New_York", "America/Los_Angeles"</string>-->
-    <!--2<string name="no_timezone">Timezone not specified</string>-->
-    <!--2<string name="invalid_timezone">Timezone id not valid</string>-->
 
     <!-- Strings for setting profile name -->
     <string name="set_profile_name">Set profile name</string>
@@ -1045,8 +849,6 @@
     <string name="separate_challenge_summary">Separate challenge enabled: %s</string>
 
     <!-- Strings for setting a new password -->
-    <!--<string name="reset_password">Reset password</string>-->
-    <!--2<string name="new_password">New password</string>-->
     <string name="require_password_entry">Require strongest available authentication type on next unlock</string>
     <string name="dont_require_password_on_boot">Do not require password to start user in future</string>
     <string name="password_reset_success">Password has been reset</string>
@@ -1060,10 +862,7 @@
 
     <!-- Strings for managing Settings -->
     <string name="settings_management_title">Settings management</string>
-    <!--<string name="stay_on_while_plugged_in">Keep the device on while plugged in</string>-->
     <string name="install_non_market_apps">Allow installs from unknown sources</string>
-    <!--<string name="set_location_enabled">Set location enabled</string>-->
-    <!--<string name="set_location_mode">Set location mode (deprecated version of set location enabled)</string>-->
 
     <!-- Strings for setting support messages -->
     <string name="support_messages">Support messages</string>
@@ -1126,11 +925,6 @@
     <string name="request_to_set_profile_parent_new_password_device_requirement">Request user to set profile parent new password (device requirement only)</string>
 
     <!-- Device owner to profile owner communication (COMP and DO<->PO of secondary users) -->
-    <!--2<string name="bind_device_admin_category_title">Bind to profile owner</string>-->
-    <!--<string name="bind_device_admin_policy_title">Bind to profile owner service</string>-->
-
-    <!--2<string name="bind_to_profile_owner_failed">Failed to bind to profile owner. Is the user running/unlocked?</string>-->
-    <!--<string name="po_user_status">Profile owner user status</string>-->
     <string name="managed_profile_not_running">Managed profile not running</string>
     <string name="managed_profile_running_but_locked">Managed profile running but locked</string>
     <string name="managed_profile_not_running_or_unlocked">Managed Profile not running or is locked</string>
@@ -1138,8 +932,6 @@
     <string name="po_user_is_unlocked">Profile owner user with serial number %1$d is unlocked</string>
     <string name="po_user_is_secondary">Profile owner belongs to secondary user</string>
     <string name="require_one_po_to_bind">Requires exactly one profile owner allowed to bind to</string>
-    <!--<string name="hide_profile_owner_launcher_icon">Hide profile owner icon</string>-->
-    <!--<string name="install_ca_cert_in_po_user">Install CA certificate in the profile owner user</string>-->
 
     <!-- strings used in the reset password with token dialog -->
     <string name="reset_password_token_none">(None)</string>
@@ -1179,20 +971,6 @@
     <string name="cross_profile_apps_add_button_text">Add app</string>
     <string name="cross_profile_apps_remove_button_text">Remove app</string>
     <string name="cross_profile_apps_reset_button_text">Reset cross profile apps</string>
-
-    <!--<string name="install_update">Install update from file</string>-->
-    <!--2<string name="install_update_prompt">This will attempt to install the update file ota.zip in the TestDPC files directory, if the file exists (i.e. if you pushed it there with adb). Do you want to continue?</string>-->
-    <!--2<string name="install_update_prompt_yes">Yes</string>-->
-    <!--2<string name="install_update_prompt_no">No</string>-->
-
-    <!-- strings used in dpc login screen and dpc policy compliance screen.-->
-    <!--2<string name="dpc_login_title">Select provisioning method</string>-->
-    <!--2<string name="dpc_login_explanation">Select provisioning method:</string>-->
-    <!--2<string name="dpc_login_do">Fully managed device</string>-->
-    <!--2<string name="dpc_login_po">Managed profile</string>-->
-    <!--2<string name="dpc_login_comp">Managed profile on a fully managed device</string>-->
-    <!--2<string name="dpc_policy_compliance_title">Dpc policy compliance</string>-->
-    <!--2<string name="dpc_policy_compliance_explanation">TestDPC setup is completed.</string>-->
 
     <string name="vpn_exempted_packages">Exempted packages</string>
     <string name="vpn_lockdown">Lockdown</string>

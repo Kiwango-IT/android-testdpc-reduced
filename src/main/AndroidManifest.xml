@@ -183,28 +183,6 @@
             </intent-filter>
         </receiver>
 
-        <!--<receiver android:name=".BootReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>-->
-
-        <!--<receiver android:name=".policy.resetpassword.ResetPasswordService$LockedBootCompletedReceiver"
-                android:enabled="@bool/is_o_or_later"
-                android:exported="true"
-                android:directBootAware="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>-->
-
-        <!--<service android:name=".policy.resetpassword.ResetPasswordService"
-                android:enabled="@bool/is_o_or_later"
-                android:exported="false"
-                android:directBootAware="true" >
-        </service>-->
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
@@ -238,11 +216,6 @@
                 android:name=".comp.ProfileOwnerService"
                 android:exported="true"
                 android:permission="android.permission.BIND_DEVICE_ADMIN"/>
-
-        <!--<service
-                android:name=".comp.DeviceOwnerService"
-                android:exported="true"
-                android:permission="android.permission.BIND_DEVICE_ADMIN"/>-->
 
         <service
                 android:name=".DeviceAdminService"

@@ -38,8 +38,7 @@ public abstract class ManageResolveInfoFragment extends BaseManageComponentFragm
   @Override
   protected SpinnerAdapter createSpinnerAdapter() {
     mResolveInfos = loadResolveInfoList();
-    return null;//new ResolveInfoSpinnerAdapter(
-        //getActivity(), R.layout.app_row, R.id.pkg_name, mResolveInfos);
+    return null;
   }
 
   protected abstract List<ResolveInfo> loadResolveInfoList();

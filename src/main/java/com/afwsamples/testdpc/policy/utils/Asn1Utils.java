@@ -107,14 +107,6 @@ public class Asn1Utils {
     if (!(set instanceof ASN1Set)) {
       throw new CertificateParsingException("Expected set, found " + set.getClass().getName());
     }
-
-    /*
-    ImmutableSet.Builder<Integer> builder = ImmutableSet.builder();
-    for (Enumeration<?> e = ((ASN1Set) set).getObjects(); e.hasMoreElements();) {
-        builder.add(getIntegerFromAsn1((ASN1Integer) e.nextElement()));
-    }
-    return builder.build();
-    */
     HashSet<Integer> ret = new HashSet<>();
     for (Enumeration<?> e = ((ASN1Set) set).getObjects(); e.hasMoreElements(); ) {
       ret.add(getIntegerFromAsn1((ASN1Integer) e.nextElement()));
